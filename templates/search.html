@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Interface</title>
+    <link rel="stylesheet" href="/static/css/search.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <br />
+      <div class="header">Search</div>
+      <input type="text" id="search-input" placeholder="Enter your query..." />
+      <div id="autocomplete-list" class="autocomplete-items"></div>
+      <div id="llmResponse" class="llmResponse"></div>
+      <br />
+      <div style="display: flex">
+        <div id="categories" style="width: 10%; padding-right: 20px">
+          <div class="category-label">Filter by Category</div>
+          <div id="category-filter" class="category-filter">
+            {% for category in categories %}
+            <label class="category-button active"
+              ><input
+                class="category-checkbox"
+                type="checkbox"
+                value="{{ category }}"
+              />
+              {{ category }}</label
+            >
+            {% endfor %}
+          </div>
+        </div>
+
+        <div id="results" class="results-container" style="width: 80%"></div>
+      </div>
+    </div>
+
+    <script src="/static/js/search.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VisualAIze</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <script src="/static/js/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+      <div class="menu-item" onclick="showIframe('iframe1')">
+        <i class="fas fa-robot"></i> <span>Ask Me</span>
+      </div>
+      <div class="menu-item" onclick="showIframe('iframe2')">
+        <i class="fas fa-video"></i> <span>Video Processing</span>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="hero">
+        <center>
+          <h1><i class="fas fa-video"></i> VisualAIze</h1>
+        </center>
+      </div>
+
+      <!-- iFrame Section -->
+      <div class="iframe-container">
+        <iframe id="iframe1" src="/ask_me" title="Ask Me"></iframe>
+        <iframe
+          id="iframe2"
+          src="/video_processing"
+          title="Video Processing"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">VisualAIze</div>
+  </body>
+</html>

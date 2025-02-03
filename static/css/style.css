@@ -1,0 +1,138 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-color: #f6f8fa;
+  color: #21313c;
+  display: flex;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #1e2a31;
+  color: white;
+  position: fixed;
+  transition: width 0.3s;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.sidebar.collapsed {
+  width: 57px;
+}
+.sidebar .menu-item {
+  padding: 15px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.sidebar .menu-item i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+.sidebar.collapsed .menu-item span {
+  display: none;
+}
+.sidebar .menu-item:hover {
+  background-color: #285e68;
+}
+
+.sidebar .toggle-btn {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 15px;
+  text-align: left;
+  transition: color 0.3s;
+}
+.sidebar .toggle-btn:hover {
+  color: white;
+}
+
+/* Main Content Styling */
+.main-content {
+  margin-left: 250px;
+  padding: 40px;
+  width: calc(100% - 250px);
+  transition: margin-left 0.3s;
+}
+.main-content.collapsed {
+  margin-left: 70px;
+  width: calc(100% - 70px);
+}
+
+/* Hero Section */
+.hero {
+  padding: 30px 10px;
+  text-align: center;
+  background-color: #e0f4f1;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #21313c;
+  margin-bottom: 10px;
+}
+.hero h3 {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #21313c;
+}
+.hero a {
+  color: #5a67d8;
+  text-decoration: none;
+  font-weight: 600;
+}
+.hero a:hover {
+  text-decoration: underline;
+}
+
+.iframe-container {
+  width: 100%;
+  height: 1024px;
+  margin-top: 20px;
+  background: #ffffff;
+  border: 1px solid #d3d3d3;
+  border-radius: 8px;
+  overflow: hidden;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: none;
+}
+#iframe1 {
+  display: block;
+}
+
+/* Footer */
+.footer {
+  background-color: #10323b;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
